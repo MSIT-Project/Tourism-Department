@@ -4,7 +4,7 @@
 
 </div>
 <div align="center">
-<h1>Tourism-Department</h1>
+<h1>Tourism-Department Office</h1>
 <h2>Hotel Booking Analytics for Cancellation Trends and Most Booked Hotel Insights</h2>
 </div>
 <br>
