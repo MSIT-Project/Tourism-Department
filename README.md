@@ -23,9 +23,14 @@ Achieve measurable improvements in hotel performance, including a 15% reduction 
 
 <div align="center"><h2>Entity Relationship Diagram</h2>
   </div>
-  
-
+<br>
   <picture>
    <img src="./img/ERD_img.png" alt="Banner image" />
 </picture>
-
+<br>
+<div align="center"><h2>Star Schema Diagram</h2>
+  </div>
+<br>
+<picture>
+   <img src="./img/star_schema.png" alt="Banner image" />
+</picture>
