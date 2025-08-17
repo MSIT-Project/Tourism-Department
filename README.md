@@ -18,5 +18,10 @@ Achieve measurable improvements in hotel performance, including a 15% reduction 
 <div align="center"><h2>Entity Relationship Diagram</h2>
   </div>
   #
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/img/ERD_img.png)
+
+  <picture>
+   <source media="(min-width: 768px)" srcset="desktop-image.gif" />
+   <source media="(min-width: 500px)" srcset="tablet-image.png" />
+   <img src="/img/ERD_img.png" alt="Banner image" />
+</picture>
 
