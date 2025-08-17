@@ -32,5 +32,5 @@ Achieve measurable improvements in hotel performance, including a 15% reduction 
   </div>
 <br>
 <picture>
-   <img src="./img/star_schema.png" alt="Banner image" />
+   <img src="./img/Star_SCHEMA DIAGRAM.jpg" alt="Banner image" />
 </picture>
