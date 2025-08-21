@@ -1,0 +1,59 @@
+with source as (
+
+    select
+        hotel,
+        is_canceled,
+        lead_time,
+        arrival_date_year,
+        arrival_date_month,
+        arrival_date_week_number,
+        arrival_date_day_of_month,
+        stays_in_weekend_nights,
+        stays_in_week_nights,
+        adults,
+
+        case
+            when children in ('NULL','0') then null
+            else cast(children as int64)
+        end as children,
+
+        babies,
+        meal,
+        country,
+        market_segment,
+        distribution_channel,
+        is_repeated_guest,
+        previous_cancellations,
+        previous_bookings_not_canceled,
+        reserved_room_type,
+        assigned_room_type,
+        booking_changes,
+        deposit_type,
+
+        case
+            when agent in ('NULL','0') then null
+            else cast(agent as int64)
+        end as agent,
+
+        case
+            when company in ('NULL','0') then null
+            else cast(company as int64)
+        end as company,
+
+        days_in_waiting_list,
+        customer_type,
+        adr,
+        required_car_parking_spaces,
+        total_of_special_requests,
+        reservation_status,
+        cast(reservation_status_date as date) as reservation_status_date
+
+    from `dw-hotel-booking-analytics`.`analytics_demo`.`bookings`
+
+),
+
+deduped as (
+    select distinct * from source
+)
+
+select * from deduped

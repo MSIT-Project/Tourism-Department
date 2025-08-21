@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: analytics_demo    # dataset name in BigQuery
+    tables:
+      - name: hotel_bookings1
+      - name: hotel_bookings2

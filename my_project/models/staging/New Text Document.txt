@@ -1,0 +1,24 @@
+with raw as (
+
+    select *
+    from {{ ref('hotel_bookings') }}   -- 👈 since you seeded hotel_bookings.csv
+
+),
+
+renamed as (
+
+    select
+        cast(booking_id as string) as booking_id,
+        hotel as hotel_name,
+        cast(check_in_date as date) as check_in_date,
+        cast(check_out_date as date) as check_out_date,
+        cast(adults as int64) as adults,
+        cast(children as int64) as children,
+        cast(adr as numeric) as average_daily_rate,
+        cast(is_canceled as bool) as is_canceled
+    from raw
+    where booking_id is not null
+
+)
+
+select * from renamed

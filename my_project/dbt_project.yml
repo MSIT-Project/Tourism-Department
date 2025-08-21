@@ -1,0 +1,36 @@
+name: hotel_project        # your dbt project name
+version: '1.0'
+config-version: 2
+
+profile: 'my_project'
+
+# Models configuration
+models:
+  hotel_project:
+    # Staging models
+    staging:
+      +materialized: view
+      +enabled: true   # enable all models in the staging folder
+
+    # Intermediate models
+    intermediate:
+      +materialized: view
+      +enabled: true
+
+    # Marts / fact tables
+    marts:
+      +materialized: table
+      +enabled: true
+
+# Seeds configuration if you have CSV seeds
+seeds:
+  hotel_project:
+    +enabled: true
+    +materialized: seed
+
+# Snapshots configuration (optional)
+snapshots:
+  hotel_project:
+    +enabled: true
+
+# Tests and macros are auto-discovered in dbt

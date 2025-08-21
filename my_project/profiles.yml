@@ -1,0 +1,14 @@
+my_project:
+  outputs:
+    dev:
+      dataset: analytics_demo
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:/Users/Laptop/.dbt/service_account.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: dw-hotel-booking-analytics
+      threads: 4
+      type: bigquery
+  target: dev
